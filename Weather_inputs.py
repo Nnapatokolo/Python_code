@@ -10,7 +10,7 @@ retry_session = retry(cache_session, retries=5, backoff_factor=0.2)
 openmeteo = openmeteo_requests.Client(session=retry_session)
 
 # Geocode the location using the postcode
-geolocator = Nominatim(user_agent="Patrick")
+geolocator = Nominatim(user_agent="Phoebe")
 location_input = input ('Enter location:')
 location = geolocator.geocode(location_input)
 latitude = location.latitude
